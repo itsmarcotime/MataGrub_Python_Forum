@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MataGrub News</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+  <div class="">
+    <header>
+      <h1 class="pageTitle">
+        <a href="/home" class="pageTitle">MataGrub News</a>
+      </h1>
+      <nav>
+        {% if session['logged_in'] == True %}
+        <a href="/home" class="pageTitle">Home Page</a>
+        <a href="/posts" class="pageTitle">View Posts</a>
+        <a href="/profile" class="pageTitle">Profile</a>
+        <a href="{{url_for('do_logout')}}">
+          <button id="logout" class="btn-no-style">
+            Logout
+          </button>
+        </a>
+        {% else %}
+        <a href="/login" class="pageTitle">login</a>
+        {% endif %}
+      </nav>
+    </header>
+    <main>
+      {% block body %}
+      {% endblock %}
+    </main>
+    <footer>
+      Created By MataGrub 2024
+    </footer>
+  </div>
+  
+  {% if logged_in %}
+  {% endif %}
+</body>
+
+</html>
