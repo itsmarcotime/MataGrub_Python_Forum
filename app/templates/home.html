@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section>
+
+  <div>
+    <h2>Welcome, {{username}}!
+      <a href='{{url_for('do_logout')}}'>Logout</a> 
+    </h2>
+  </div>
+  <h2>Create New Post</h2>
+
+  <a href="/add_post">Click here to write a post!</a>
+</section>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Body Text</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+  </tr>
+  {% for post in articles %}
+    <tr>
+      <td>{{post[0]}}</td>
+      <td>{{post[1]}}</td>
+      <td>{{post[2]}}</td>
+      <td>{{post[3]}}</td>
+      <td>{{post[4]}}</td>
+      <td><a href='edit_post/{{post[0]}}'>Edit</a></td>
+      <td><a href='#'>Delete</a></td>
+    </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
