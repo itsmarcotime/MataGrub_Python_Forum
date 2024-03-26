@@ -9,11 +9,4 @@ def base_page():
 @main_pages.route('/home')
 # @check_logged_in
 def home():
-    cursor.execute("SELECT * FROM articles")
-    posts = cursor.fetchall()
-
-    if posts:
-        return render_template('home.html', username=session['username'], articles=posts)
-    else:
-        msg = 'No posts have been found. Click on create post!'
-        return render_template('home.html', username=session['username'], msg=msg)
+    render_template('home.html')
