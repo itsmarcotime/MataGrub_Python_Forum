@@ -9,4 +9,4 @@ def base_page():
 @main_pages.route('/home')
 # @check_logged_in
 def home():
-    render_template('home.html')
+    return render_template('home.html')

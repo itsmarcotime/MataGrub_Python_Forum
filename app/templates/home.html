@@ -5,7 +5,7 @@
 
   <div>
     <h2>Welcome, {{username}}!
-      <a href='{{url_for('do_logout')}}'>Logout</a> 
+      <a href='#'>Logout</a> 
     </h2>
   </div>
   <h2>Create New Post</h2>
@@ -30,7 +30,7 @@
       <td>{{post[2]}}</td>
       <td>{{post[3]}}</td>
       <td>{{post[4]}}</td>
-      <td><a href='edit_post/{{post[0]}}'>Edit</a></td>
+      <!-- <td><a href='edit_post/{{post[0]}}'>Edit</a></td> -->
       <td><a href='#'>Delete</a></td>
     </tr>
   {% endfor %}
