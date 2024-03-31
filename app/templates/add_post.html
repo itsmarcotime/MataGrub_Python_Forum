@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Create Post</h1>
+<form action="{{ url_for('add_post') }}" method="post" autocomplete="off">
+        
+    <input type="title" name="title" placeholder="Title" id="title" required>
+
+    <input type="text" name="body" placeholder="Body" id="body" required>
+
+    <div class="msg">{{ msg }}</div>
+    <input type="submit" value="Create Post">
+
+</form>
+
+{% endblock %}

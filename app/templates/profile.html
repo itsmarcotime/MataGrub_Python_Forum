@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1 class="posts_heading">{{account[1]}}'s Profile Page.</h1>
+
+<div>
+    <h2 class="profile_underline">Your account details are here:</h2>
+    <table class="posts_heading">
+        <tr>
+            <td class="profile_underline">Username:</td>
+            <td class="posts_heading">{{account[1]}}</td>
+        </tr>
+        <tr>
+            <td class="profile_underline">Email:</td>
+            <td class="posts_heading">{{account[3]}}</td>
+        </tr>
+    </table>
+    
+</div>
+
+{% endblock %}
